@@ -4,5 +4,5 @@ def list_to_dict(nums):
         d[num] = num**3
     return d
 
-numbers = [1, 2, 3, 4]
-print(list_to_dict(numbers))
+numbers = list(map(int, input("Enter numbers separated by spaces: ").split()))
+print("Dictionary of cubes:", list_to_dict(numbers))
