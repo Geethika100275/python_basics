@@ -1,6 +1,16 @@
-print("Simple Calculator")
-try:
-   num=int(input("enter a number")
-   num2=int(input("enter another number")
-except ValueError:
-   print("enter a number")
+print("Safe Calculator")
+
+while True:
+    try:
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+
+        result = num1 / num2
+        print("Result:", result)
+        break
+
+    except ValueError:
+        print("Error: Please enter valid numbers!")
+    
+    except ZeroDivisionError:
+        print("Error: Cannot divide by zero!")
